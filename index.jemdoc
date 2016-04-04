@@ -1,0 +1,35 @@
+# jemdoc: menu{MENU}{index.html}
+
+~~~
+{}{img_left}{fwo-logo.jpg}{}{370px}{}{http://www.fwo.be/en/}
+= Decoupling multivariate polynomials\n in nonlinear system identification
+~~~
+
+== Overview
+
+System identification is the art of building mathematical models from measured data. Today its focus is shifting from linear to nonlinear dynamical models to capture the nonlinear effects of the real world. However, an important issue with nonlinear models is the absence of intuitive and physical insight.
+
+This project focuses on a central task in block-oriented system identification and nonlinear state-space modeling: modeling nonlinear functions of several variables. We will study methods to unravel a multivariate polynomial into univariate polynomials. Models can thus be given physical or intuitive interpretation and the number of parameters drastically decreases.
+
+We study exact and approximate decompositions. The former provide a theoretical understanding of the decoupling task, whereas the latter are of interest for noisy data or when a parsimonious approximation is needed.
+
+The focus is on 3 solution approaches:
+- tensor methods generalize linear algebra to high-order analogues of matrices with natural links to polynomials,
+- structured matrix approximation methods represent polynomials as structured matrices with certain properties,
+- a function linearization approach translates the task into simultaneous matrix diagonalizations.
+
+~~~
+{}{img_left}{overview.png}{}{800px}{}{}
+~~~
+
+== Team members
+
+- [http://vubirelec.be/people/gabriel-hollander Gabriel Hollander]
+- [http://homepages.vub.ac.be/~pdreesen/ Philippe Dreesen]
+- [http://homepages.vub.ac.be/~mishteva/ Mariya Ishteva]
+- [http://homepages.vub.ac.be/~imarkovs/ Ivan Markovsky]
+- [http://vubirelec.be/people/johan-schoukens Johan Schoukens]
+
+== Former team members
+
+- [http://www.gipsa-lab.grenoble-inp.fr/~konstantin.usevich/ Konstantin Usevich]

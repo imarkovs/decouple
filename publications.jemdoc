@@ -1,0 +1,20 @@
+# jemdoc: menu{MENU}{publications.html}
+= Publications of the DECOUPLE project
+
+== Journal papers
+
+#includeraw{j.html}
+
+== Conference papers 
+
+#includeraw{c.html}
+
+== Book chapters 
+
+#includeraw{bc.html}
+
+== Technical reports
+
+#includeraw{t.html}
+
+

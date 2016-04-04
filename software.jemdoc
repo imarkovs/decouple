@@ -1,0 +1,21 @@
+# jemdoc: menu{MENU}{software.html}
+# jemdoc: eqs, eqsize{150}, 
+# jemdoc: addpackage{amsmath}
+# jemdoc: addpackage{mathdots}
+# jemdoc: addpackage{amsfonts}
+# jemdoc: addpackage{times}
+# jemdoc: addpackage{mathptmx}
+# jemdoc: showsource
+= Software produced by the DECOUPLE project
+
+~~~
+{}{img_left}{??.png}{}{120px}{}{}
+== MATLAB package for exact polynomial decoupling 
+Description
+~~~
+
+~~~
+{}{img_left}{??.png}{}{120px}{}{}
+== MATLAB package for approximate polynomial decoupling 
+Description
+~~~

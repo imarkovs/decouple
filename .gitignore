@@ -1,0 +1,6 @@
+_site
+_import
+.DS_Store
+Gemfile.lock
+*~
+
