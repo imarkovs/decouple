@@ -19,17 +19,18 @@ The focus is on 3 solution approaches:
 - a function linearization approach translates the task into simultaneous matrix diagonalizations.
 
 ~~~
-{}{img_left}{overview.png}{}{800px}{}{}
+{}{img_left}{overview.svg}{}{800px}{}{}
 ~~~
 
 == Team members
 
-- [http://vubirelec.be/people/gabriel-hollander Gabriel Hollander]
-- [http://homepages.vub.ac.be/~pdreesen/ Philippe Dreesen]
-- [http://homepages.vub.ac.be/~mishteva/ Mariya Ishteva]
-- [http://homepages.vub.ac.be/~imarkovs/ Ivan Markovsky]
-- [http://vubirelec.be/people/johan-schoukens Johan Schoukens]
+- Klaas Moerman (new PhD student joining the team from July 2016)
+- [http://vubirelec.be/people/gabriel-hollander Gabriel Hollander] (PhD student)
+- [http://homepages.vub.ac.be/~pdreesen/ Philippe Dreesen] (co-supervisor)
+- [http://homepages.vub.ac.be/~mishteva/ Mariya Ishteva] (co-supervisor)
+- [http://homepages.vub.ac.be/~imarkovs/ Ivan Markovsky] (supervisor)
+- [http://vubirelec.be/people/johan-schoukens Johan Schoukens] (co-supervisor)
 
 == Former team members
 
-- [http://www.gipsa-lab.grenoble-inp.fr/~konstantin.usevich/ Konstantin Usevich]
+- [http://www.gipsa-lab.grenoble-inp.fr/~konstantin.usevich/ Konstantin Usevich] (co-supervisor)
