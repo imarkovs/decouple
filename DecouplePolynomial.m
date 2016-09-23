@@ -26,6 +26,383 @@ decoupledPolynomial = struct(...
     'relerr', relative_error);
 end
 
+function [monomials, varSym, exponents] = Monomials(monName, nvar, degree)
+% This function is based on the generate_mons_full and generate
+% mons_partial functions of Philippe Dreesen and gives, for a given
+% variable name, a basis for monomials in "nvar" number of variables and of
+% degree "degree" back.
+% Usage:
+%               Monomials(variableName, Nvariables, degree)
+% It is possible to give the second variable as a cell array. For example,
+% {5} means that monomials of the form
+%               1, u5, u5^2, u5^3, ...
+% are requested (here with variableName = 'u').
+% Written by Gabriel Hollander, Vrije Universiteit Brussel, Dept. ELEC
+% Latest version: 19/09/2014
+
+if isnumeric(nvar)
+    Nvar = nvar;            % to be used in the loop at the end of the script.
+    varSym = sym(monName, [nvar 1]);
+    exponents = generate_mons(nvar, degree);
+    numberOfMonomials = size(exponents, 1);
+    monomials = sym(zeros(numberOfMonomials, 1));
+    powers = sym(zeros(numberOfMonomials, nvar));
+elseif iscell(nvar)
+    Nvar = 1;
+    nvar = nvar{1};         % return the number inside the cell array.
+    varSym = sym(monName, [nvar 1]);
+    varSym = varSym(nvar);
+    exponents = generate_mons(1, degree);       % use 1 as the number of variables for this function.
+    numberOfMonomials = size(exponents, 1);
+    monomials = sym(zeros(numberOfMonomials, 1));
+    powers = sym(zeros(numberOfMonomials, 1));  % use again 1 as the number of variables.
+end
+    
+% Make a loop to make the powers and multiply the elements together of the
+% array given back by the generate_mons function.
+    for i = 1 : numberOfMonomials
+       for k = 1 : Nvar
+           powers(i, k) = varSym(k) ^ exponents(i,k);
+       end
+       monomials(i) = prod(powers(i,:));
+    end
+end
+% The functions created by Philippe Dreesen and used in Gabriel Hollander's implentation.
+function fullBase = generate_mons(n,d)
+% Generate a full basis of monomials.
+%  
+% SIGNATURE
+% fullBase = generate_mons_full(nvar,d)
+%
+% DESCRIPTION
+% Generates full basis (degrees 0:d) of monomials as a matrix;
+% Each row of base refers to a n-tuple of exponents of a monomial 
+% where each column corresponds to a variable.
+% 
+% INPUTS
+%    nvar       =    number of variables
+%    d          =    desired degree
+%
+% OUTPUTS
+%    fullBase   =    full basis of monomials 
+%
+% EXAMPLE
+%
+% CALLS
+%    
+% AUTHOR
+%   Philippe Dreesen (philippe.dreesen@gmail.com)
+%   June 2010
+%
+
+
+% fullBase = generate_mons_full(n,d)
+% Generates (full) basis of monomials of degree d in n variables.
+
+
+fullBase = zeros(1,n);
+
+for i = 1 : d,
+    fullBase = [fullBase ; generate_mons_partial(n,i)];
+end
+
+end
+function base = generate_mons_partial(n,d)
+% Generate a partial basis of monomials.
+%  
+% SIGNATURE
+% base = generate_mons_partial(nvar,d)
+%
+% DESCRIPTION
+% Generate a partial basis (degree 'd'; 'n' variables) of monomials as a 
+% matrix. Each row of 'base' refers to a n-tuple of exponents of a monomial 
+% where each column corresponds to a variable.
+% 
+% INPUTS
+%    nvar       =    number of variables
+%    d          =    desired degree
+%
+% OUTPUTS
+%    base       =    partial basis of monomials 
+%
+% EXAMPLE
+%
+% CALLS
+% generate_mons_partial
+%
+% AUTHOR
+%    Philippe Dreesen (philippe.dreesen@gmail.com)
+%    June 2010
+%
+% TODO: preallocate base and work with index of writeatrow or something
+
+if n <= 1
+    base = d;
+else
+    base = [];
+    for i = d :-1: 0
+        temp = generate_mons_partial(n-1,d-i);
+        base = [base; i*ones(size(temp,1),1) generate_mons_partial(n-1,d-i)];
+    end
+end
+end
+function output = RandomReal(bounds, howmany)
+% This function has its inspiration from the same named Mathematica
+% function. It is an 'extension' of the MATLAB function rand and gives
+% uniform random real numbers.
+% Usage:      RandomReal([leftBoundary, rightBoundary], [Nrows, Ncolumns]),
+% where the second argument is optional and is default [1, 1]. 
+% Written by Gabriel Hollander
+% Vrije Universiteit Brussel, Dept. ELEC
+% 02/09/2014
+if nargin == 1
+    howmany = [1, 1];
+end
+    a = bounds(1);
+    b = bounds(2);
+    output = a + (b-a).*rand(howmany);
+end
+function [coefficientsOrdered, monomialsOrdered] = CoefficientList(polynomial, vars, maxDegree, symBool)
+% This function is fully based on two existing functions: the built-in
+% coeffs function of MATLAB and the Monomials function based on those of
+% Philippe Dreessen. I have chosen to name the same as the one from
+% Mathematica.
+% It needs one argument more as the coeffs function, namely the maximal
+% degree of the polynomial.
+% The used monomials should contain variable names of the form u1, u2, etc.
+% Usage:
+%          CoefficientList(polynomial, vars, maxDegree, {'sym'})
+% If vars has length 1, then the script looks at the monomials based on the
+% exact index of vars. For example, if vars = u3, then the script looks at
+% the monomials
+%           1, u3, u3^2, u3^3, ..., u3^maxDegree.
+% If vars has length greater than 1, the script looks at length(vars)
+% number of variables. For example, if vars = [u1, u2, u3], then the
+% scripts looks at these three variables, and all their power combinations.
+% In the version of 13/10/2014, also symbolic coefficients are allowed, as
+% well as combinations of symbolic and numeric coefficients. If one wants
+% to use these, the fourth argument 'sym' has to be added.
+% Written by Gabriel Hollander, Vrije Universiteit Brussel, Dept. ELEC
+% Latest version: 13/10/2014
+
+if nargin < 4
+    symBool = '';
+end
+
+    numberOfVariables = length(vars);
+    
+if numberOfVariables > 1           % create different variable names
+    % Find the string name of the variable, to be used in the monomials, to be
+    % able to compare.
+        varName = char(vars(1));
+        varName = varName(1);
+    % Find the coefficients of the monomials of the given polynomial, and the
+    % 'standard' monomials in good order, of given degree maxDegree.
+        [coefficientsWithoutOrder, monomialsWithoutOrder] = coeffs(polynomial, vars);
+        monomialsOrdered = Monomials(varName, numberOfVariables, maxDegree);
+elseif numberOfVariables == 1      % look at the explicit index of vars and only his powers
+    % Find the string name of the variable, to be used in the monomials, to be
+    % able to compare.
+        varName = char(vars);
+        indexName = str2double(varName(2:end));
+        varName = varName(1);
+    % Find the coefficients of the monomials of the given polynomial, and the
+    % 'standard' monomials in good order, of given degree maxDegree.
+        [coefficientsWithoutOrder, monomialsWithoutOrder] = coeffs(polynomial, vars);
+        monomialsOrdered = Monomials(varName, {indexName}, maxDegree);
+end
+
+    numberOfMonomials = length(monomialsOrdered);
+% Initialisation of the output vector. If 'sym' is given as extra fourth
+% argument, then make the output symbolic.
+    if strcmp(symBool, 'sym')
+        coefficientsOrdered = sym(zeros(numberOfMonomials, 1));
+    else
+        coefficientsOrdered = zeros(numberOfMonomials, 1);
+    end
+% Change the elements of monomialsWithoutOrder and monomialsOrdered to 
+% strings, to be able to compare these with strcmp.
+    monomialsWithoutOrderStrings = sym2str(monomialsWithoutOrder);
+    monomialsOrderedStrings = sym2str(monomialsOrdered);
+
+% For each monomial in the ordered set, find the appropriate coefficient in
+% the unordered set. If no coefficient is found, this means the coefficient
+% is actually 0.
+    for i = 1 : numberOfMonomials
+           coef = coefficientsWithoutOrder(strcmp(monomialsWithoutOrderStrings, monomialsOrderedStrings(i)));
+           if isempty(coef)
+               coefficientsOrdered(i) = 0;
+           else
+               coefficientsOrdered(i) = coef;
+           end               
+    end
+end
+function monomialString = sym2str(monomials)
+    lengthMonomials = length(monomials);
+    monomialString = cell(lengthMonomials, 1);
+    for i = 1 : lengthMonomials
+        monomialString{i} = char(monomials(i));
+    end
+end
+function output = PadLeft(arrayToPad, paddingElement)
+% This function takes a two-dimensional array or a cell array as an input
+% and pads all its rows with paddingElement in order to make it
+% rectangular, if it's not already so.
+% Usage:      PadLeft(array, paddingElement)
+% where the second argument is optional and its default value is 0.
+% Written by Gabriel Hollander, Vrije Universiteit Brussel, Dept. ELEC
+% 05/09/2014
+
+    if nargin == 1
+        paddingElement = 0;
+    end
+
+% Check if the given arrayToPad is just one column large. If more, then
+% give an error and stop the program.
+    if iscell(arrayToPad) && size(arrayToPad,2) >= 2
+        error('The array to pad should be given as one column (cell array) of vectors of (possibly) different lengths.');
+    else
+        if isfloat(arrayToPad)      % arrayToPad is already an array, do nothing
+            output = arrayToPad;
+        elseif iscell(arrayToPad)   % arrayToPad is a cell array, here is the work
+            cellArrayLengths = cellfun(@length,arrayToPad);
+            maxLength = max(cellArrayLengths);
+            if min(cellArrayLengths) == maxLength   % all the elements in the
+                                    % cell array have the same length, just
+                                    % convert the cell array to an array
+                output = cell2mat(arrayToPad);
+            else                    % some elements of the cell array are shorter
+                                    % and should be padded on the left with
+                                    % paddingElement
+                output = zeros(length(arrayToPad), maxLength);
+                for i = 1 : length(arrayToPad)
+                    currentRow = arrayToPad{i};
+                    currentLength = length(currentRow);
+                    output(i,:) = [paddingElement * ones(1, maxLength - currentLength), currentRow ];
+                end
+            end
+        end
+    end
+end
+
+
+% Functions from tensorlab
+function T = cpdgen(U)
+%CPDGEN Generate full tensor given a polyadic decomposition.
+%   T = cpdgen(U) computes the tensor T as the sum of R rank-one tensors
+%   defined by the columns of the factor matrices U{n}.
+%
+%   See also btdgen, lmlragen, cpdres.
+
+%   Authors: Laurent Sorber (Laurent.Sorber@cs.kuleuven.be)
+%            Marc Van Barel (Marc.VanBarel@cs.kuleuven.be)
+%            Lieven De Lathauwer (Lieven.DeLathauwer@kuleuven-kulak.be)
+
+T = reshape(U{1}*kr(U(end:-1:2)).',cellfun('size',U(:).',1));
+end
+function X = kr(U,varargin)
+%KR Khatri-Rao product.
+%   kr(A,B) returns the Khatri-Rao product of two matrices A and B, of 
+%   dimensions I-by-K and J-by-K respectively. The result is an I*J-by-K
+%   matrix formed by the matching columnwise Kronecker products, i.e.,
+%   the k-th column of the Khatri-Rao product is defined as
+%   kron(A(:,k),B(:,k)).
+%
+%   kr(A,B,C,...) and kr({A B C ...}) compute a string of Khatri-Rao 
+%   products A x B x C x ..., where x denotes the Khatri-Rao product.
+%
+%   See also kron.
+
+%   Authors: Laurent Sorber (Laurent.Sorber@cs.kuleuven.be)
+%            Marc Van Barel (Marc.VanBarel@cs.kuleuven.be)
+%            Lieven De Lathauwer (Lieven.DeLathauwer@kuleuven-kulak.be)
+
+if ~iscell(U), U = [{U} varargin]; end
+[J,K] = size(U{end});
+if any(cellfun('size',U,2) ~= K)
+    error('kr:U','Input matrices should have the same number of columns.');
+end
+
+X = reshape(U{end},[J 1 K]);
+for n = length(U)-1:-1:1
+    I = size(U{n},1);
+    A = reshape(U{n},[1 I K]);
+    X = reshape(bsxfun(@times,A,X),[I*J 1 K]);
+    J = I*J;
+end
+X = reshape(X,[size(X,1) K]);
+end
+function [relerr,P,D] = cpderr(U,Uest)
+%CPDERR Errors between factor matrices in a CPD.
+%   [relerr,P,D] = cpderr(U,Uest) computes the relative difference in
+%   Frobenius norm between the factor matrix U{n} and the estimated factor
+%   matrix Uest{n} as
+%
+%      relerr(n) = norm(U{n}-Uest{n}*P*D{n},'fro')/norm(U{n},'fro')
+%
+%   in which the matrices P and D{n} are a permutation and scaling matrix
+%   such that the estimated factor matrix Uest{n} is optimally permuted and
+%   scaled to fit U{n}. If size(Uest{n},2) > size(U{n},2), then P selects
+%   size(U{n},2) rank-one terms of Uest that best match those in U. If
+%   size(Uest{n},2) < size(U{n},2), then P pads the rank-one terms of Uest
+%   with rank-zero terms. Furthermore, it is important to note that the
+%   diagonal matrices D{n} are not constrained to multiply to the identity
+%   matrix. In other words, relerr(n) returns the relative error between
+%   U{n} and Uest{n} independently from the relative error between U{m} and
+%   Uest{m}, where m ~= n.
+%
+%   See also cpdgen, lmlraerr.
+
+%   Authors: Laurent Sorber (Laurent.Sorber@cs.kuleuven.be)
+%            Marc Van Barel (Marc.VanBarel@cs.kuleuven.be)
+%            Lieven De Lathauwer (Lieven.DeLathauwer@kuleuven-kulak.be)
+
+% Check the factor matrices U and Uest.
+if ~iscell(U), U = {U}; end;
+if ~iscell(Uest), Uest = {Uest}; end;
+if length(U) ~= length(Uest)
+    error('cpderr:U','length(U) should equal length(Uest).');
+end
+R = size(U{1},2);
+Rest = size(Uest{1},2);
+if any(cellfun('size',U,2) ~= R) || any(cellfun('size',Uest,2) ~= Rest)
+    error('cpderr:U','size(U(est){n},2) should be the same for all n.');
+end
+if any(cellfun('size',U(:),1) ~= cellfun('size',Uest(:),1))
+    error('cpderr:U','size(U{n},1) should equal size(Uest{n},1).');
+end
+
+% Compute the congruence between each pair of rank-one terms.
+N = length(U);
+C = ones(Rest,R);
+for n = 1:N
+    Un = bsxfun(@rdivide,U{n},sqrt(dot(U{n},U{n})));
+    Uestn = bsxfun(@rdivide,Uest{n},sqrt(dot(Uest{n},Uest{n})));
+    C = C.*abs(Uestn'*Un);
+end
+
+% Compute the permutation matrix.
+P = zeros(Rest,R);
+for r = 1:R
+    [Cr,i] = max(C,[],1);
+    [~,j] = max(Cr);
+    P(i(j),j) = 1;
+    C(i(j),:) = 0;
+    C(:,j) = 0;
+end
+
+% Compute the scaling matrices and relative errors.
+D = cell(1,N);
+relerr = zeros(1,N);
+for n = 1:N
+    Uestn = Uest{n}*P;
+    D{n} = diag(conj(dot(U{n},Uestn)./dot(Uestn,Uestn)));
+    D{n}(~isfinite(D{n})) = 1;
+    relerr(n) = norm(U{n}-Uestn*D{n},'fro')/norm(U{n},'fro');
+end
+end
+
+
 function [coupledPolynomial, modelInfo] = checkInputStructure(coupledPolynomial)
 n = 2; m = size(coupledPolynomial.coupledCoeffs,2);
 if ~isfield(coupledPolynomial, 'covarianceMatrix'), coupledPolynomial.covarianceMatrix = []; coupledPolynomial.CPDtype = 'no'; 
@@ -170,12 +547,6 @@ end
         Jstar(:,:,k) = Ju_mf(uTemporary{:});
         ystar(:,k) = f_mf(uTemporary{:});
     end
-
-% Check if the rank estimation is correct
-    rkest = rankest(Jstar);
-%     if (rkest ~= r), 
-%         display(['Rank estitation = ' num2str(rkest) ' is not correct: overriding by correct one = ' num2str(r)]); 
-%     end
     re = r;
     
 % Perform the Canonical Polyadic Decomposition on the Jacobian matrix

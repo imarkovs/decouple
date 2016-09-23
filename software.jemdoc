@@ -9,13 +9,7 @@
 = Software produced by the DECOUPLE project
 
 ~~~
-{}{img_left}{??.png}{}{120px}{}{}
-== MATLAB package for exact polynomial decoupling 
-Description
-~~~
-
-~~~
-{}{img_left}{??.png}{}{120px}{}{}
-== MATLAB package for approximate polynomial decoupling 
-Description
+{}{img_left}{approximate.svg}{}{120px}{}{}
+== [decoupling.html MATLAB package for polynomial decoupling]
+This function decouples a given multivariate polynomial into a set of univariate polynomials and transformation matrices. It can incorporate a weight matrix, which can be used for approximate decoupling.
 ~~~
