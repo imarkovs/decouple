@@ -1,5 +1,6 @@
 # makefile: SLRA makefile
 all: 
+	cd ~/texinputs && $(MAKE) decouple
 	./jemdoc.py index.jemdoc
 	./jemdoc.py publications.jemdoc
 	./jemdoc.py software.jemdoc

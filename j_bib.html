@@ -1,122 +1,16 @@
-<h1>j.bib</h1><a name="sensor-ieee"></a><pre>
-@article{<a href="j.html#sensor-ieee">sensor-ieee</a>,
-  author = {I. Markovsky},
-  title = {Comparison of adaptive and model-free methods for dynamic measurement},
-  journal = {IEEE Signal Proc. Letters},
-  year = {2015},
-  volume = {22},
-  number = {8},
-  pages = {1094--1097},
-  doi = {10.1109/LSP.2014.2388369},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/sensor-ieee.pdf">http://homepages.vub.ac.be/~imarkovs/publications/sensor-ieee.pdf</a>},
-  abstract = {Dynamic measurement aims to improve the speed and accuracy characteristics of measurement devices by signal processing. State-of-the-art dynamic measurement methods are model-based adaptive methods, i.e., 1) they estimate model parameters in real-time and 2) based on the identified model perform model-based signal processing. The proposed model-free method belongs to the class of the subspace identification methods. It computes directly the quantity of interest without an explicit parameter estimation. This allows efficient computation as well as applicability to general high order multivariable processes.},
-  keywords = {subspace methods, total least squares, adaptive filtering, model-free signal processing.},
-  software = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/sensor-ieee-code.tar">http://homepages.vub.ac.be/~imarkovs/publications/sensor-ieee-code.tar</a>}
-}
-</pre>
-
-<a name="slra-consistency"></a><pre>
-@article{<a href="j.html#slra-consistency">slra-consistency</a>,
-  author = {I. Markovsky and R. Pintelon},
-  title = {Identification of linear time-invariant systems from multiple experiments},
-  journal = {IEEE Trans. Signal Process.},
-  volume = {63},
-  number = {13},
-  pages = {3549--3554},
-  doi = {10.1109/TSP.2015.2428218},
-  year = {2015},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/papers/slra-consistency.pdf">http://homepages.vub.ac.be/~imarkovs/papers/slra-consistency.pdf</a>},
-  abstract = {A standard assumption for consistent estimation in the errors-in-variables setting is persistency of excitation of the noise free input signal. We relax this assumption by considering data from multiple experiments. Consistency is obtained asymptotically as the number of experiments tends to infinity. The main theoretical and algorithmic difficulties are related to the growing number of to-be-estimated initial conditions. The method proposed in the paper is based on analytic elimination of the initial conditions and optimization over the remaining parameters. The resulting estimator is consistent, however, achieving asymptotically efficiency remains an open problem.},
-  keywords = {maximum likelihood system identification, sum-of-damped exponentials modeling, consistency, structured low-rank approximation}
-}
-</pre>
-
-<a name="als-kdu"></a><pre>
-@article{<a href="j.html#als-kdu">als-kdu</a>,
-  author = {K. Usevich and I. Markovsky},
-  title = {Adjusted least squares fitting of algebraic hypersurfaces},
-  journal = {Linear Algebra Appl.},
-  optvolume = {},
-  optnumber = {},
-  optpages = {--},
-  doi = {10.1016/j.laa.2015.07.023},
-  year = {2015},
-  pdf = {<a href="http://arxiv.org/abs/1412.2291">http://arxiv.org/abs/1412.2291</a>},
-  abstract = {We consider the problem of fitting a set of points in Euclidean space by an algebraic hypersurface. We assume that points on a true hypersurface, described by a polynomial equation, are corrupted by zero mean independent Gaussian noise, and we estimate the coefficients of the true polynomial equation. The adjusted least squares estimator accounts for the bias present in the ordinary least squares estimator. The adjusted least squares estimator is based on constructing a quasi-Hankel matrix, which is a bias-corrected matrix of moments. For the case of unknown noise variance, the estimator is defined as a solution of a polynomial eigenvalue problem. In this paper, we present new results on invariance properties of the adjusted least squares estimator and an improved algorithm for computing the estimator for an arbitrary set of monomials in the polynomial equation.},
-  keywords = {hypersurface fitting; curve fitting; statistical estimation, errors-in-variables; Quasi-Hankel matrix; Hermite polynomials; affine invariance; subspace clustering},
-  file = {~/als/als-computation/als.tex}
-}
-</pre>
-
-<a name="sensor-cep"></a><pre>
-@article{<a href="j.html#sensor-cep">sensor-cep</a>,
-  author = {I. Markovsky},
-  title = {An application of system identification in metrology},
-  journal = {Control Engineering Practice},
-  volume = {43},
-  optnumber = {},
-  pages = {85--93},
-  year = {2015},
-  doi = {10.1016/j.conengprac.2015.07.001},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/sensor-cep.pdf">http://homepages.vub.ac.be/~imarkovs/publications/sensor-cep.pdf</a>},
-  abstract = {Dynamic measurement refers to problems in metrology aiming at modification of characteristics of measurement devices by signal processing. Prototypical dynamic measurement problems, used in the paper as illustrative examples, are speeding up thermometers and weight scales. The paper presents a system theoretic formalization of the dynamic measurement problem as an input estimation problem for a system with step input. If the process dynamics is a priori known, the dynamic measurement problem is equivalent to a state estimation problem and can be solved efficiently in the linear time-invariant case by the Kalman filter. In the case of unknown process dynamics, the dynamic measurement problem can be solved by adaptive filtering methods. A topic of current research, called data-driven dynamic measurement, is development of methods that compute the measurement quantity without explicitly identifying the process dynamics.},
-  software = {<a href="http://homepages.vub.ac.be/~imarkovs/sensor-cep-experiments.html">http://homepages.vub.ac.be/~imarkovs/sensor-cep-experiments.html</a>},
-  keywords = {system identification, behavioral approach, Kalman filtering, metrology, reproducible research}
-}
-</pre>
-
-<a name="slra-agcd"></a><pre>
-@article{<a href="j.html#slra-agcd">slra-agcd</a>,
-  author = {K. Usevich and I. Markovsky},
-  title = {Variable projection methods for approximate (greatest) common divisor computations},
-  year = {2016},
-  url = {<a href="http://arxiv.org/abs/1304.6962">http://arxiv.org/abs/1304.6962</a>},
-  pdf = {<a href="http://arxiv.org/pdf/1304.6962v1">http://arxiv.org/pdf/1304.6962v1</a>},
-  abstract = {We consider the problem of finding for a given $N$-tuple of polynomials the closest $N$-tuple that has a common divisor of degree at least $d$. Extended weighted Euclidean semi-norm of coefficients is used as a measure of closeness. Two equivalent formulations of the problem are considered: (i) direct optimization over common divisors and cofactors, and (ii) Sylvester lowrank approximation. We use the duality between least-squares and least-norm problems to show that (i) and (ii) are closely related to mosaic Hankel low-rank approximation. This allows us to apply recent results on complexity and accuracy of computations for mosaic Hankel low-rank approximation. We develop optimization methods based on the variable projection principle. These methods have linear complexity in the degrees of the polynomials if either $d$ is small or $d$ is of the same order as the degrees of the polynomials. We provide a software implementation that is based on a software package for structured low-rank approximation.},
-  journal = {Theoretical Computer Science}
-}
-</pre>
-
-<a name="jan"></a><pre>
-@article{<a href="j.html#jan">jan</a>,
-  author = {I. Markovsky},
-  title = {On the most powerful unfalsified model for data with missing values},
-  year = {2016},
-  journal = {Systems \& Control Letters},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/jan.pdf">http://homepages.vub.ac.be/~imarkovs/publications/jan.pdf</a>},
-  abstract = {The notion of the most powerful unfalsified model plays a key role in system identification. Since its introduction in the mid 80's, many methods have been developed for its numerical computation. All currently existing methods, however, assume that the given data is a /complete/ trajectory of the system. Motivated by the practical issues of data corruption due to failing sensors, transmission lines, or storage devices, we study the problem of computing the most powerful unfalsified model from data with missing values. We do not make assumptions about the nature or pattern of the missing values apart from the basic one that they are a part of a trajectory of a linear time-invariant system. The identification problem with missing data is equivalent to a Hankel structured low-rank matrix completion problem. The method proposed constructs rank deficient complete submatrices of the incomplete Hankel matrix. Under specified conditions the kernels of the submatrices form a nonminimal kernel representation of the data generating system. The final step of the algorithm is reduction of the nonminimal kernel representation to a minimal one. Apart from its practical relevance in identification, missing data is a useful concept in systems and control. Classic problems, such as simulation, filtering, and tracking control can be viewed as missing data estimation problems for a given system. The corresponding identification problems with missing data are ``data-driven'' equivalents of the classical simulation, filtering, and tracking control problems.},
-  keywords = {most powerful unfalsified model, exact system identification, subspace methods, missing data, low-rank matrix completion.},
-  doi = {10.1016/j.sysconle.2015.12.012},
-  software = {<a href="http://homepages.vub.ac.be/~imarkovs/mpum-md.tar">http://homepages.vub.ac.be/~imarkovs/mpum-md.tar</a>},
-  optaddendum = {\newline\medskip A subspace identification method with missing data.}
-}
-</pre>
-
-<a name="jss-kdu"></a><pre>
-@article{<a href="j.html#jss-kdu">jss-kdu</a>,
-  title = {Multivariate and {2D} Extensions of Singular Spectrum Analysis with the {Rssa} {Package}},
-  author = {N. Golyandina and A. Korobeynikov and A. Shlemov and K. Usevich},
-  journal = {Journal of Statistical Software},
-  doi = {10.18637/jss.v067.i02},
-  volume = {67},
-  number = {2},
-  year = {2015},
-  abstract = {Implementation of multivariate and 2D extensions of singular spectrum analysis (SSA) by means of the R package Rssa is considered. The extensions include MSSA for simultaneous analysis and forecasting of several time series and 2D-SSA for analysis of digital images. A new extension of 2D-SSA analysis called shaped 2D-SSA is introduced for analysis of images of arbitrary shape, not necessary rectangular. It is shown that implementation of shaped 2D-SSA can serve as a basis for implementation of MSSA and other generalizations. Efficient implementation of operations with Hankel and Hankel-block-Hankel matrices through the fast Fourier transform is suggested. Examples with code fragments in R, which explain the methodology and demonstrate the proper use of Rssa, are presented.},
-  keywords = {analysis, decomposition, forecasting, image processing, R package, singular spectrum analysis, time series}
-}
-</pre>
-
-<a name="DreIshSch15"></a><pre>
-@article{<a href="j.html#DreIshSch15">DreIshSch15</a>,
+<h1>j.bib</h1><a name="Dreesen2015"></a><pre>
+@article{<a href="j.html#Dreesen2015">Dreesen2015</a>,
   author = {P. Dreesen and M. Ishteva and J. Schoukens},
-  title = {Decoupling multivariate polynomials using first-order information and tensor decompositions},
-  journal = {SIAM J. Matrix Anal. Appl.},
-  volume = {36},
-  number = {2},
-  pages = {864--879},
+  title = {Decoupling Multivariate Polynomials Using First-Order Information and Tensor Decompositions},
+  journal = {{SIAM} J. Matrix Anal. Appl.},
   year = {2015},
+  volume = {36},
+  pages = {864--879},
+  number = {2},
+  abstract = {We present a method to decompose a set of multivariate real polynomials into linear combinations of univariate polynomials in linear forms of the input variables. The method proceeds by collecting the first-order information of the polynomials in a set of sampling points, which is captured by the Jacobian matrix evaluated at the sampling points. The canonical polyadic decomposition of the three-way tensor of Jacobian matrices directly returns the unknown linear relations as well as the necessary information to reconstruct the univariate polynomials. The conditions under which this decoupling procedure works are discussed, and the method is illustrated on several numerical examples.},
   doi = {10.1137/140991546},
-  pdf = {<a href="http://homepages.vub.ac.be/~mishteva/papers/decoupling_multivariate_polynomials.pdf">http://homepages.vub.ac.be/~mishteva/papers/decoupling_multivariate_polynomials.pdf</a>}
+  pdf = {<a href="http://homepages.vub.ac.be/~mishteva/papers/decoupling_multivariate_polynomials.pdf">http://homepages.vub.ac.be/~mishteva/papers/decoupling_multivariate_polynomials.pdf</a>},
+  keywords = {polynomial, tensor decomposition, Waring problem, multilinear algebra, polynomial algebra}
 }
 </pre>
 
