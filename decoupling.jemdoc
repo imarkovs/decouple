@@ -1,0 +1,85 @@
+# jemdoc: menu{MENU}{index.html}
+
+~~~
+{}{img_left}{fwo-logo.jpg}{}{370px}{}{http://www.fwo.be/en/}
+= Decoupling multivariate polynomials\n in nonlinear system identification
+~~~
+
+== [DecouplingPackage.zip MATLAB package for approximate polynomial decoupling]
+
+The starting point for this package are two coupled multivariate polynomials with real coefficients. The MATLAB function +DecouplePolynomial.m+ (click [DecouplePolynomial.m here] to download the source code) can be used to find an approximate decoupled representation of this function, using different kinds of covariance matrices as weighting matrices, as described in [https://arxiv.org/abs/1601.07800 this article]. It attempts to find the best possible decoupled representation, according to a cost function defined on the output of the system. In this decoupled representation, the output is written as a linear combination of parallel univariate polynomials of linear forms of the input (see Figure):
+
+~~~
+{}{img_left}{decoupling.svg}{}{600px}{}{}
+~~~
+
+In this figure, f represents the coupled multivariate polynomial before the decoupling step. After the decoupling, V and W represent two transformation matrices, and g represent r different univariate polynomials.
+
+== Usage
+In this section, the usage of the MATLAB function +DecouplePolynomial.m+ is discussed in detail.
+
+=== Input structure
+The function takes the MATLAB structure +coupledPolynomial+ as argument and outputs the structure +decoupledPolynomial+. The argument structure should contain the following fields
+- +coupledCoeffs+, the coefficients of the coupled multivariate polynomial,
+- +covarianceMatrix+, the covariance matrix of +coupledCoeffs+, used in the decoupling method,
+- +CPDtype+ ('no', 'diag', 'blockdiag' or 'full'), type of weighted decoupling,
+- +r+, the number of branches of the decoupling.
+- +lambda+, a metaparameter to be used in the case the covarance matrix has low rank. If not given, the default value is 1.
+
+In the case no covariance matrix or an empty covariance matrix is given, then the implementation performs an unweighted decoupling. This implementation performs similarly to other implementations like [http://www.tensorlab.net/ Tensorlab] or the [https://nl.mathworks.com/matlabcentral/fileexchange/1088-the-n-way-toolbox Nway toolbox].
+
+=== Output structure
+The output of the function is the MATLAB structure +decoupledPolynomial+ containing all the information about the decoupled polynomial. It contains the following fields:
+- +type+, the type of the decoupling,
+- +We+, the transformation matrix W ('e' stands for 'estimated'),
+- +Ve+, the transformation matrix V ('e' stands for 'estimated'),
+- +Ge+, the coefficients of the decoupled polynomials,
+- +iteration_count+, the number of iterations before the end of the algorithm,
+- +relerr+, a measure for the relative error of the decoupling.
+
+== Example code and output
+This part shows a small example using this implementation. We define the coefficients of the coupled polynomial function with the statement
+
++coupledPolynomial.approximatedCoeffs = ...+
+
+These coefficients are organized in columns, one for every output of the function, and are ordered using the list of monomials (for 2 inputs and degree 3)
+
++1, u1, u2, u1^2, u1*u2, u2^2, u1^3, u1^2*u2, u1*u2^2, u2^3+.
+
+Next, the covariance matrix is defined by the statement
+
++coupledPolynomial.covarianceMatrix = ...+
+
+Also the number of branches of the decoupled representation is defined by
+
++coupledPolynomial.r = ...+
+
+and the type of weighted decoupled is given by
+coupledPolynomial.CPDtype = ...;
+
+In the case the covariance matrix is rank-deficient, the hyperparameter +lambda+ can be defined (it is set to 1 as a default value) by
+
++coupledPolynomial.lambda = ...;+
+
+Finally, the decoupling process is performed with the command
+
++decoupledPolynomial = DecouplePolynomial(coupledPolynomial);+
+
+The output of this function is the structure +decoupledPolynomial+ with the following fields:
+- +type+: decoupling with full weight
+- +We+: 2x2 double
+- +Ve+: 2x2 double
+- +Ge+: 2x4 double
+- +iteration_count+: 20
+- +relerr+: 0.0096
+
+The matrix +Ge+ contains the coefficients of the decoupled polynomials, ordered from high to low degree, one row per polynomial.
+
+Click [minimal_example.m here] to download the source code with the minimal example.
+=== Authors
+This work has been developed by [http://homepages.vub.ac.be/~gholland/ Gabriel Hollander] under the supervision of the following people:
+- [http://homepages.vub.ac.be/~pdreesen/index.html Philippe Dreesen]
+- [http://homepages.vub.ac.be/~mishteva/ Mariya Ishteva]
+- [http://homepages.vub.ac.be/~imarkovs/ Ivan Markovsky]
+- [http://vubirelec.be/people/johan-schoukens Johan Schoukens]
+
