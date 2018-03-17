@@ -1,6 +1,14 @@
 # jemdoc: menu{MENU}{publications.html}
 = Publications of the DECOUPLE project
 
+== Books
+
+#includeraw{b.html}
+
+== PhD theses
+
+#includeraw{th.html}
+
 == Journal papers
 
 #includeraw{j.html}

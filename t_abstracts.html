@@ -3,7 +3,109 @@
 
 <tr valign="top">
 <td align="right" class="bibtexnumber">
-[<a name="Hollander2016">1</a>]
+[<a name="usevich2018">1</a>]
+</td>
+<td class="bibtexitem">
+K.&nbsp;Usevich, P.&nbsp;Dreesen, and M.&nbsp;Ishteva.
+ Decoupling multivariate polynomials: Interconnections between
+  tensorizations.
+ Technical report, 2018.
+[&nbsp;<a href="t_bib.html#usevich2018">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="ica18a">2</a>]
+</td>
+<td class="bibtexitem">
+I.&nbsp;Markovsky, A.&nbsp;Fazzi, and N.&nbsp;Guglielmi.
+ Applications of polynomial common factor computation in signal
+  processing.
+ Technical report, Vrije Univ. Brussel, 2018.
+[&nbsp;<a href="t_bib.html#ica18a">bib</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/ica18a.pdf">pdf</a>&nbsp;]
+<blockquote>
+We consider the problem of computing the greatest common divisor of a set of univariate polynomials and present applications of this problem in system theory and signal processing. One application is blind system identification: given the responses of a system to unknown inputs, find the system. Assuming that the unknown system is finite impulse response and at least two experiments are done with inputs that have finite support and their Z-transforms have no common factors, the impulse response of the system can be computed up to a scaling factor as the greatest common divisor of the Z-transforms of the outputs. Other applications of greatest common divisor problem in system theory and signal processing are finding the distance of a system to the set of uncontrollable systems and common dynamics estimation in a multi-channel sum-of-exponentials model.
+</blockquote>
+<p><blockquote>
+Keywords: blind system identification; sum-of-exponentials modeling; distance to uncontrollability; approximate common factor; low-rank approximation
+</blockquote>
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="ica18b">3</a>]
+</td>
+<td class="bibtexitem">
+I.&nbsp;Markovsky and P.-L. Dragotti.
+ Using structured low-rank approximation for sparse signal recovery.
+ Technical report, Vrije Univ. Brussel, 2018.
+[&nbsp;<a href="t_bib.html#ica18b">bib</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/ica18b.pdf">pdf</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/software/ica18.tgz">software</a>&nbsp;]
+<blockquote>
+Structured low-rank approximation is used in model reduction, system identification, and signal processing to find low-complexity models from data. The rank constraint imposes the condition that the approximation has bounded complexity and the optimization criterion aims to find the best match between the data-a trajectory of the system-and the approximation. In some applications, however, the data is sub-sampled from a trajectory, which poses the problem of sparse approximation using the the low-rank prior. This paper considers a modified structured low-rank approximation problem where the observed data is a linear transformation of a system's trajectory with reduced dimension. We reformulate this problem as a structured low-rank approximation with missing data and propose a solution methods based on the variable projections principle. We compare the structured low-rank approximation approach with the classical sparsity inducing method of <sub>1</sub>-norm regularization. The <sub>1</sub>-norm regularization method is effective for sum-of-exponentials modeling with a large number of samples, however, it is not suitable for identification of systems with damping.
+</blockquote>
+<p><blockquote>
+Keywords: structured low-rank approximation, sparse approximation, missing data estimation, sum-of-exponentials modeling, <sub>1</sub>-norm regularization
+</blockquote>
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="slra-sysid">4</a>]
+</td>
+<td class="bibtexitem">
+K.&nbsp;Usevich and I.&nbsp;Markovsky.
+ Software package for mosaic-hankel structured low-rank approximation.
+ Technical report, Dept. ELEC, Vrije Universiteit Brussel, 2017.
+[&nbsp;<a href="t_bib.html#slra-sysid">bib</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/slra-sysid.pdf">.pdf</a>&nbsp;]
+<blockquote>
+This paper presents the SLRA package (http://slra.github.io)-C software with interface to MATLAB, Octave, and R for solving low-rank approximation problems with the following features: mosaic Hankel structured approximating matrix, weighted 2-norm approximation criterion, and fixed and missing elements in the approximating matrix. The package has applications in system identification, machine learning, and computer algebra. The paper gives an overview of the features of the package, including the wrapper functions for system identification (IDENT package) and approximate greatest common divisor (AGCD) computations. The addendum to the paper, available from http://homepages.vub.ac.be/&nbsp;imarkovs/slra-demo, includes examples that demonstrate the usage, versatility, and efficiency of the software.
+</blockquote>
+<p><blockquote>
+Keywords: system identification; low-rank approximation; mosaic Hankel matrix; missing data; approximate greatest common factor; software
+</blockquote>
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="ddctr-comparison">5</a>]
+</td>
+<td class="bibtexitem">
+S.&nbsp;Formentin and I.&nbsp;Markovsky.
+ A comparison between structured low-rank approximation and
+  correlation approach for data-driven output tracking.
+ Technical report, Dept. ELEC, Vrije Universiteit Brussel, 2017.
+[&nbsp;<a href="t_bib.html#ddctr-comparison">bib</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/ddctr-comparison.pdf">.pdf</a>&nbsp;]
+<blockquote>
+Data-driven control is an alternative to the classical model-based control paradigm. The main idea is that a model of the plant is not explicitly identified prior to designing the control signal. Two recently proposed methods for data-driven control-a method based on correlation analysis and a method based on structured matrix low-rank approximation and completion-solve identical control problems. The aim of this paper is to compare the methods, both theoretically and via a numerical case study. The main conclusion of the comparison is that there is no universally best method: the two approaches have complementary advantages and disadvantages. A future work will aim to combine the two methods into a more effective unified approach for data-driven output tracking.
+</blockquote>
+<p><blockquote>
+Keywords: data-driven control, output tracking, virtual reference feedback tuning, structured low-rank approximation, matrix completion.
+</blockquote>
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="Hollander2016">6</a>]
 </td>
 <td class="bibtexitem">
 G.&nbsp;Hollander, P.&nbsp;Dreesen, M.&nbsp;Ishteva, and J.&nbsp;Schoukens.
@@ -24,6 +126,28 @@ Multivariate polynomials arise in many different disciplines. Representing
 	model errors.
 </blockquote>
 <p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="uncontr">7</a>]
+</td>
+<td class="bibtexitem">
+N.&nbsp;Guglielmi and I.&nbsp;Markovsky.
+ Computing the distance to uncontrollability: the SISO case.
+ Technical report, Vrije Univ. Brussel, 2014.
+[&nbsp;<a href="t_bib.html#uncontr">bib</a>&nbsp;| 
+<a href="http://homepages.vub.ac.be/~imarkovs/publications/uncontr.pdf">pdf</a>&nbsp;]
+<blockquote>
+In this paper, the problem of computing the distance from a given linear time-invariant system to the nearest uncontrollable system is posed and solved in the behavioral setting. In the case of a system with two external variables, the problem is restated as a Sylvester structured distance to singularity problem. The structured distance to singularity problem is then solved by integrating a system of ordinary differential equations which describes the gradient associated to the cost functional.
+An advantage of the method with respect to other approaches is in its capability to include further constraints. Numerical simulations also show that the method is more robust to the initial approximation than the Newton-type methods.
+</blockquote>
+<p><blockquote>
+Keywords: Sylvester matrix, structured pseudospectrum, structured low-rank approximation, ODEs on matrix manifolds, structured distance to singularity, distance to uncontrollability, behavioral approach.
+</blockquote>
+
 </td>
 </tr>
 </table><hr><p><em>This file was generated by

@@ -1,41 +1,194 @@
 # jemdoc: menu{MENU}{presentations.html}
 = Presentations 
 
+== 2018
+
+- Low-rank approximation with applications\n
+  Invited lecture at the BioTensors workshop, 27--31 August 
+- Structured low-rank approximation approach to sum-of-exponentials modeling\n
+  Invited lecture at the International conference on Approximation and Matrix Functions, University of Lille, 1 June
+- System identification in the behavioral setting\n
+  Talks given at the Seminar of the Department of Electrical Engineering, TU Eindhoven, 14 March
+- Data-driven signal processing\n
+  [https://www.esat.kuleuven.be/stadius/selma/index.php/2018/01/30/kick-off-meeting-selma/ SeLMA Kick-off meeting], K.U. Leuven, 23 February
+
+== 2017
+
+- Nonlinear system identification: finding structure in nonlinear
+black-box models\n
+Poster at the [www.cs.huji.ac.il/conferences/CAMSAP17 IEEE
+International Workshop on Computational Advances in Multi-Sensor Adaptive Processing], Curaçao, Dutch Antilles, 10--13 December
+
+- [talks/learning-to-learn.pdf Learning to learn]\n
+  Talks given at the Seminarie Actuele Wetenschappen en Samenleving, University of Brussels, 17 November
+
+- Discovering structure in black-box models using tensors\n
+Poster at the [https://people.kth.se/~bo/ERNSI/ Workshop of the European Research Network System Identification], Domaine
+St Joseph in Sainte-Foy-lès-Lyon, France, 24--27 September
+
+- Identification from a "small" number of samples\n
+  Poster to be presented at the [https://ernsi2017.sciencesconf.org/ Workshop of the European network on system identification (ERNSI)], Lyon, France, 24--27, September
+
+- Decoupling multivariate functions using tensors\n
+Talk at the [https://www.siam.org/meetings/ag17/ SIAM Conference on Applied Algebraic Geometry (SIAM AG17)], Atlanta, Georgia, USA, 31 Jully -- 4 August
+
+- Sum-of-exponentials modeling and common dynamics estimation using Tensorlab\n
+  Interactive presentation at the [https://www.ifac2017.org/ IFAC World Congress], Toulouse, France, 9--14, July
+- Application of low-rank approximation for nonlinear system identification \n 
+  Talk given at the [https://www.um.edu.mt/events/med2017/ Mediterranean conference on control and automation], Valletta, Malta, 3--6, July
+- [talks/sparsity.pdf Sparsity in system identification and data-driven control]\n
+  Invited lecture at the [http://homepages.ulb.ac.be/~majansen/workshopSAMS2017/ Workshop on sparsity in applied mathematics and statistics], Brussels, 1--2 June 
+
+- [talks/tda.pdf Scientometrics via low-rank approximation and completion]\n
+  Talk given at the Intelligence Research Institute of the Spanish Research Council, Barcelona, Spain, 4 April 
+- Data-driven time-varying dynamic measurements\n
+  Talk given by G. Quintana-Carapia at the [http://www.beneluxmeeting.nl/2017/ Benelux meeting on systems and control], Spa, Belgium, 28--30, March
+
+- Decoupling multivariate functions: exploring intrinsic structure\n
+Talk at the [http://www.beneluxmeeting.nl 36th Benelux Meeting on Systems and Control], Spa, Belgium, 28--30 March
+
+- [http://www.talks.cam.ac.uk/talk/index/70922 A missing data approach to data-driven filtering and control]\n
+  Talk given at the [http://www.talks.cam.ac.uk/show/index/11827 CUED Control Group Seminars], Cambridge, UK, 27 February
+- Low-rank approximation and its applications\n
+  Talk given at the [http://www.dcsc.tudelft.nl/ Delft Center for Systems and Control], Delft, The Netherlands, 18 January
+
 == 2016
 
-- Philippe Dreesen, Johan Schoukens, Workshop on Tensor Decompositions and Applications (TDA 2016), Leuven, Belgium, “Discovering Structure in Black-Box System Identification”
-(poster), January 18-22, 2016
+- Low-rank approximation and its applications\n
+Invited lecture presented at the [http://www.math.bas.bg/IMIdocs/BGSIAM/bgsiam16_announcement.htm The 11th Annual Meeting of the Bulgarian Section of SIAM], Sofia, Bulgaria, 20--22, December 
+- Innovation-based subspace identification in open and closed-loop\n
+Talk given by Guillaume Mercère at the [http://cdc2016.ieeecss.org/ IEEE Conference on Decision and Control], Las Vegas, 12-14 December
+- An outlook from past and current research on low-rank approximation\n
+Invited lecture given at the DYSCO study day, Louvain-La-Neuve, 1 December
+- [talks/nonlin-sysid.pdf Application of low-rank approximation in nonlinear system identification]\n
+Discussion talk given at the "Nonlinear identification workshop, Brussels, 16--17, November
+- Data-driven dynamic weight measurement\n
+Poster presented by Gustavo Quintana-Carapia at the [https://www.ptb.de/cms/en/ptb/fachabteilungen/abt8/fb-84/ag-842/workdyn2016.html International Workshop on Analysis of Dynamic Measurements], Berlin, Germany, 9--10 November
 
-- Philippe Dreesen, Mariya Ishteva, Johan Schoukens, ILAS 20th Conference of the International Linear Algebra Society (ILAS 2016), Leuven, Belgium, “Decoupling nonlinear black-box models using tensors” (presentation), July 11-15, 2016
+- Low-rank matrix approximation\n
+Two-hour seminar given at the University of Antwerpen, 24 October
+- [talks/goettingen.pdf Structured low-rank approximation approach to sum-of-exponentials]\n
+Talk given at the [http://www.uni-goettingen.de/en/86244.html Colloquia Institut für Numerische und Angewandte Mathematik], Goettingen, 18 October
+- A low-rank matrix completion approach to data-driven signal processing\n
+Talk given at the [https://people.kth.se/~bo/ERNSI/ Workshop of the European network on system identification (ERNSI)], Castelbrando Cison di Valmarino, Italy, 25--28 September
+- Innovation-based subspace identification in open- and closed-loop\n
+Poster presented by Guillaume Mercère at the [https://people.kth.se/~bo/ERNSI/ Workshop of the European network on system identification (ERNSI)], Castelbrando Cison di Valmarino, Italy, 25--28 September 
 
-- Philippe Dreesen, Conference on Noise and Vibration Engineering (ISMA 2016), Leuven, Belgium, “Decoupling nonlinear black-box models” (presentation), 19-21 Sept 2016
+- Discovering structure in black-box models using tensors\n
+Poster at the [https://people.kth.se/~bo/ERNSI/ Workshop of the
+European Research Network System Identification], Cison
+di Valmarino, Italy, 25--28 September
 
-- Philippe Dreesen, Koen Tiels, Mariya Ishteva, Johan Schoukens, Workshop of the European Research Network System Identification (ERNSI
-2016), Cison di Valmarino, Italy, “Discovering structure in black-box
-models using tensors” (poster), 25-28 Sept 2016
+- Decoupling nonlinear black-box models\n
+Talk at the [https://www.isma-isaac.be Conference on Noise and
+Vibration Engineering], Leuven, Belgium, 19--21 September 
+
+- Model order estimation based on a method for computing distance to uncontrollability\n
+Poster presented at the [http://www.isma-isaac.be/isma_conf/objectives.html Conference on noise and vibration engineering (ISMA)], Leuven, Belgium, 19--21 September 
+- [talks/model-free.pdf A low-rank matrix completion approach to data-driven signal processing]\n
+Invited lecture presented at the [http://www.commsp.ee.ic.ac.uk/~icore/SparseSignalProcessingWorkshop.html London Workshop on Sparse Signal Processing], 15-16 September
+- Missing data estimation approach to data-driven signal processing\n
+Invited lecture presented at the [http://events.math.unipd.it/dwcaa16/ Dolomites workshop on constructive approximation and applications], Canazei, Italy, 8--13 September
+
+- Low-rank approximation and its applications\n
+Talk given at the [http://math.bas.bg/index.php/en/en-mnu-research-activities-2/en-mnu-seminars Institute of mathematics and informatics], of the Bulgarian academy of science, Sofia, Bulgaria, 27 July
+
+- Decoupling nonlinear black-box models using tensors \n
+Talk at the [https://ilas2016.cs.kuleuven.be/ 20th Conference of the
+International Linear Algebra Society], Leuven, Belgium,
+11--15 July 
+
+- Data driven dynamic measurements\n
+Talk given by Gustavo Quintana-Carapia at the [http://www.beneluxmeeting.nl/2016/ Benelux meeting on systems and control], Soesterberg, Netherlands, 22--24 March
+- Scientometrics via low-rank approximation and completion\n
+Invited lecture at the [http://www.vlc.ecs.soton.ac.uk/ Vision, learning, and control group] conference, Carys manor, UK, 23 March 
+- [talks/elec16.pdf Subspace identification with constraints on the impulse response]\n
+Talk at the [http://vubirelec.be/education/seminars ELEC seminar], Brussels, 4 March
+
+- Discovering Structure in Black-Box System Identification\n
+Poster at the [https://www.esat.kuleuven.be/stadius/TDA2016/ Workshop
+on Tensor Decompositions and Applications], Leuven,
+Belgium, 18--22 January
+
+- [talks/tda.pdf Scientometrics via low-rank approximation and completion]\n
+Invited talk at the [http://www.esat.kuleuven.be/stadius/TDA2016/ Workshop on Tensor Decompositions and Applications], Leuven, Belgium, 18--22 January 
 
 == 2015
-- Philippe Dreesen, Mariya Ishteva, Johan Schoukens, GAMM 86th Annual Scientific Conference, Lecce, Italy, “Decoupling multivariate functions using tensor decompositions” (presentation), 23-27 March 2015
 
-- Philippe Dreesen, Maarten Schoukens, Koen Tiels, Johan Schoukens,, IEEE International Instrumentation and Measurement Technology
-Conference (I2MTC 2015), Pisa, Italy, “Decoupling static
-nonlinearities in a parallel Wiener-Hammerstein system: a first-order
-approach” (poster), May 2015
+- Tensor techniques for latent variable modeling\n
+Talk at the [http://www.unige.ch/math/en/annonces/anum/ Numerical analysis seminar], Department of Mathematics, University of Geneva, Switzerland, 1 December 
 
-- Philippe Dreesen, Mariya Ishteva, Johan Schoukens, HCM Workshop: Low-rank optimization and applications, Bonn, Germany, “Decoupling nonlinear functions using tensor decompositions” (poster),
-8-12 June 2015
+- Tensors and structured matrices of low rank\n
+Talk at the [https://www.siam.org/meetings/la15/ SIAM conference on applied linear algebra], Atlanta, Georgia, USA, 26--30 October
 
-- Philippe Dreesen, Thomas Goossens, Mariya Ishteva, Lieven De Lathauwer, Johan Schoukens, 12th International Conference on Latent Variable Analysis and Signal Separation (LVA-ICA 2015), Liberec, Czech Republic,Block-decoupling multivariate polynomials using the tensor block-term decomposition” (presentation by M. Ishteva), August 25 - 28, 2015
+- Decoupling multivariate functions using tensors\n
+Talk at the [https://www.eee.hku.hk/ University of Hong Kong], Hong Kong, 26 October
 
-- Philippe Dreesen, Mariya Ishteva, Johan Schoukens, IFAC Symposium on System Identification (SYSID 2015), Beijing, China, “Recovering Wiener-Hammerstein nonlinear state-space models using linear algebra” (presentation), 19-21 Oct 2015
+- Recovering Wiener-Hammerstein nonlinear state-space models using linear algebra\n
+Talk at the [https://www.ifac-control.org/events/system-identification-17th-sysid-2015 IFAC Symposium on System Identification], Beijing, China, 19--21 October
 
-- Philippe Dreesen, Mariya Ishteva, Johan Schoukens, Invited talk at the University of Hong Kong (Dept. EEE), Hong Kong, “Decoupling multivariate functions using tensors” (presentation), 26 Oct 2015
+- Tensors and latent variable models\n
+Talk at the [http://amca.cz/lva2015/ International conference on latent variable analysis and signal separation], Liberec, Czech Republic, 25--28 August
+
+- System identification in the behavioral setting\n 
+Poster presented at the [http://amca.cz/lva2015/ International conference on latent variable analysis and signal separation], Liberec, Czech Republic, 25--28 August
+
+- Model-free optimal tracking control via nuclear norm minimization\n
+Poster presented at the [http://www.siam.org/meetings/ct15/ SIAM conference on control and its applications], Paris, 8--10 June 
+
+- [talks/dagstuhl.pdf Structured low-rank approximation approach to sum-of-exponentials]\n 
+Invited talk at the [http://www.dagstuhl.de/15251/ Sparse modelling and multi-exponential analysis],
+Dagstuhl, Germany, 14--19 June
+
+- [talks/bonn.pdf A structured low-rank approximation approach to system identification]\n
+Invited lecture at the [http://www.hcm.uni-bonn.de/events/eventpages/2015/workshop-low-rank-optimization-and-applications/ Workshop on low-rank optimization and applications], Bonn, Germany, 8--12 June 
+
+- Decoupling nonlinear functions using tensor decompositions \n
+Poster at the [http://www.hcm.uni-bonn.de/events/eventpages/2015/low-rank-optimization-2015/
+Workshop on low-rank optimization and applications], Bonn, Germany, 8--12 June
+
+- Low-rank approximation and its applications\n 
+Invited lecture at the [http://www.gipsa-lab.fr/summerschool/slra2015/ Structured low-rank approximation workshop], Grenoble, 1--2 June
+
+- System identification in the behavioral setting\n
+Talk at the [http://www.uclouvain.be/11245.html Seminars in Systems and Control], U.C. Louvain, 5 May
+
+- Decoupling static nonlinearities in a parallel Wiener-Hammerstein
+system: a first-order approach \n
+Poster at the [http://2015.imtc.ieee-ims.org/ IEEE International
+Instrumentation and Measurement Technology Conference (I2MTC 2015)],
+Pisa, Italy, 11--14 May
+
+- System identification with missing data\n 
+Talk at [http://lva.insa-lyon.fr/en/node Laboratoire Vibrations Acoustique], 
+Lyon, France, 30 April
+
+- Decoupling multivariate functions using tensor decompositions\n
+Talk at the [gamm2015.unisalento.it GAMM 86th Annual Scientific
+Conference], Lecce, Italy, 23--27 March
+
+- Blind FIR system identification, distance to uncontrollability, and minimal kernal representations\n
+Talk at the [http://www.beneluxmeeting.nl/2015/ 34th Benelux Meeting on Systems and Control], 
+Lommel, Belgium, 24--26 March
 
 == 2014
-- Philippe Dreesen, Johan Schoukens, 33rd Benelux Meeting on Systems and Control (BMSC 2014), Centerparcs Heijderbos, Heijden, The Netherlands, “Decoupling of Multivariate Polynomials” (presentation), March 25-27, 2014
 
-- Philippe Dreesen, Mariya Ishteva, Johan Schoukens, Workshop on Data-driven Modeling Methods and Applications (BIL 2014), Leuven, Belgium “Decoupling multivariate functions in block-oriented system identification: a linearization approach” (presentation), 14-15 Jul 2014
+- Decoupling multivariate functions using tensor decompositions
+applied to block-oriented system identification\n
+Talk at the [KU Leuven CS/NATW Seminar on Tensor Decompositions],
+Leuven, Belgium, 17 December
 
-- Philippe Dreesen, Maarten Schoukens, Koen Tiels, Mariya Ishteva, Johan Schoukens, Workshop of the European Research Network System Identification (ERNSI 2014), Oostende, Belgium, “Decoupling multivariate functions: a linearization approach” (poster), 21-24 Sep 2014
+- Decoupling multivariate functions: a linearization approach\n
+Poster at the [https://people.kth.se/~bo/ERNSI/ Workshop of the
+European Research Network System Identification],
+Oostende, Belgium, 21--24 September
 
-- Philippe Dreesen, Mariya Ishteva, Johan Schoukens, KU Leuven CS/NATW Seminar on Tensor Decompositions, Leuven, Belgium “Decoupling multivariate functions using tensor decompositions applied to block-oriented system identification” (presentation), 17 Dec 2014
+- Decoupling multivariate functions in block-oriented system
+identification: a linearization approach\n
+Talk at the [Workshop on Data-driven Modeling Methods and Applications], Leuven, Belgium, 14--15 July
+
+- Decoupling of Multivariate Polynomials\n
+Talk at the [http://www.beneluxmeeting.nl 33rd Benelux Meeting on
+Systems and Control], Centerparcs Heijderbos, Heijden, 26
+March
+
