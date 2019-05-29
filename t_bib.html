@@ -1,32 +1,4 @@
-<h1>t.bib</h1><a name="Hollander2016"></a><pre>
-@techreport{<a href="t.html#Hollander2016">Hollander2016</a>,
-  author = {G. Hollander and P. Dreesen and M. Ishteva and J. Schoukens},
-  title = {Weighted tensor decomposition for approximate decoupling of multivariate
-	polynomials},
-  year = {2016},
-  abstract = {Multivariate polynomials arise in many different disciplines. Representing
-	such a polynomial as a vector of univariate polynomials can offer
-	useful insight, as well as more intuitive understanding. For this,
-	techniques based on tensor methods are known, but these have only
-	been studied in the exact case. In this paper, we generalize an existing
-	method to the noisy case, by introducing a weight factor in the tensor
-	decomposition. Finally, we apply the proposed weighted decoupling
-	algorithm in the domain of system identification, and observe smaller
-	model errors.},
-  pdf = {<a href="https://arxiv.org/pdf/1601.07800v1">https://arxiv.org/pdf/1601.07800v1</a>}
-}
-</pre>
-
-<a name="usevich2018"></a><pre>
-@techreport{<a href="t.html#usevich2018">usevich2018</a>,
-  title = {Decoupling multivariate polynomials: Interconnections between tensorizations},
-  author = {K. Usevich and P. Dreesen and M. Ishteva},
-  journal = {arXiv:1703.02493},
-  year = {2018}
-}
-</pre>
-
-<a name="uncontr"></a><pre>
+<h1>t.bib</h1><a name="uncontr"></a><pre>
 @techreport{<a href="t.html#uncontr">uncontr</a>,
   author = {N. Guglielmi and I. Markovsky},
   title = {Computing the distance to uncontrollability: the {SISO} case},
@@ -51,42 +23,66 @@ An advantage of the method with respect to other approaches is in its capability
 }
 </pre>
 
-<a name="ddctr-comparison"></a><pre>
-@techreport{<a href="t.html#ddctr-comparison">ddctr-comparison</a>,
-  author = {S. Formentin and I. Markovsky},
-  title = {A comparison between structured low-rank approximation and correlation approach for data-driven output tracking},
+<a name="aut-wiener"></a><pre>
+@techreport{<a href="t.html#aut-wiener">aut-wiener</a>,
+  author = {I. Markovsky},
+  title = {On the behavior of autonomous {W}iener systems},
   institution = {Dept. ELEC, Vrije Universiteit Brussel},
-  year = {2017},
-  url = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ddctr-comparison.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ddctr-comparison.pdf</a>},
-  abstract = {Data-driven control is an alternative to the classical model-based control paradigm. The main idea is that a model of the plant is not explicitly identified prior to designing the control signal. Two recently proposed methods for data-driven control---a method based on correlation analysis and a method based on structured matrix low-rank approximation and completion---solve identical control problems. The aim of this paper is to compare the methods, both theoretically and via a numerical case study. The main conclusion of the comparison is that there is no universally best method: the two approaches have complementary advantages and disadvantages. A future work will aim to combine the two methods into a more effective unified approach for data-driven output tracking.},
-  keywords = {data-driven control, output tracking, virtual reference feedback tuning, structured low-rank approximation, matrix completion.}
+  year = {2018},
+  url = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/aut-wiener.pdf">http://homepages.vub.ac.be/~imarkovs/publications/aut-wiener.pdf</a>},
+  abstract = {Wiener systems are nonlinear dynamical systems, consisting of a linear dynamical system and a static nonlinear system in a series connection. Existing results for analysis and identification of Wiener systems assume zero initial conditions. In this paper, we consider the response of a Wiener system to initial conditions only, i.e., we consider autonomous Wiener systems. Our main result is a proof that an autonomous Wiener system with a polynomial nonlinearity is equivalent to a finite-dimensional linear system. The order of the equivalent linear system is $(n + d)$-choose-$d$ --- the number of combinations with repetitions of $d$ elements out of $n$ elements --- where $n$ is the order of the linear subsystem and $d$ is the degree of the nonlinearity. The relation between the eigenvalues of the equivalent linear system and the linear subsystem is given by a rank-1 factorization of a symmetric \(d\)-way tensor. As an application of the result, we outline a procedure for identification of autonomous Wiener systems.},
+  keywords = {Nonlinear system identification, Block-oriented models, Wiener system}
 }
 </pre>
 
-<a name="ica18a"></a><pre>
-@techreport{<a href="t.html#ica18a">ica18a</a>,
-  author = {I. Markovsky and A. Fazzi and N. Guglielmi},
-  title = {Applications of polynomial common factor computation in signal processing},
+<a name="icasp"></a><pre>
+@techreport{<a href="t.html#icasp">icasp</a>,
+  author = {I. Markovsky},
+  title = {Learning {K}alman filtering with Lego mindstorms},
+  institution = {Dept. ELEC, Vrije Universiteit Brussel},
   year = {2018},
-  institution = {Vrije Univ. Brussel},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ica18a.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ica18a.pdf</a>},
-  abstract = {We consider the problem of computing the greatest common divisor of a set of univariate polynomials and present applications of this problem in system theory and signal processing. One application is blind system identification: given the responses of a system to unknown inputs, find the system. Assuming that the unknown system is finite impulse response and at least two experiments are done with inputs that have finite support and their Z-transforms have no common factors, the impulse response of the system can be computed up to a scaling factor as the greatest common divisor of the Z-transforms of the outputs. Other applications of greatest common divisor problem in system theory and signal processing are finding the distance of a system to the set of uncontrollable systems and common dynamics estimation in a multi-channel sum-of-exponentials model.},
-  keywords = {blind system identification; sum-of-exponentials modeling; distance to uncontrollability; approximate common factor; low-rank approximation}
+  url = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/icasp.pdf">http://homepages.vub.ac.be/~imarkovs/publications/icasp.pdf</a>},
+  abstract = {Research shows that, in learning science and engineering, guided project work leads to deeper understanding of theoretical concepts (as well as acquisition of hands-on skills) than the classical approach of textbook reading and attending lectures. In an approach to education based on project work, the role of the teacher is to create a stimulating learning environment and to supervise the students in accomplishing their objectives. The main challenge is to come up with projects that are engaging, diverse, and feasible in view of limited time and resources. In this paper, we describe such a signal processing project. The task is to improve the speed and accuracy characteristics of a sensor by real-time signal processing. It turns out that this is an application of Kalman filtering however the students need to identify a model of the sensor and implement the Kalman filter on a DSP. The project consists of three main tasks: 1) mathematical formalization of the problem, 2) development of solution methods, and 3) implementation and testing of the methods. The testing is done on an inexpensive laboratory setup, using the Lego Mindstorms educational kit in combination with a temperature sensor. The learning outcomes are understanding of model representations, system identification, and state estimation, as well as implementation in Matlab and C of real-time signal processing algorithms. Possible extensions include data fusion of multiple sensors, adaptive signal processing, and applications to other sensors.},
+  keywords = {Kalman filtering, dynamic measurement, system identification, digital signal processing}
 }
 </pre>
 
-<a name="ica18b"></a><pre>
-@techreport{<a href="t.html#ica18b">ica18b</a>,
-  author = {I. Markovsky and P.-L. Dragotti},
-  title = {Using structured low-rank approximation for sparse signal recovery},
+<a name="sem"></a><pre>
+@techreport{<a href="t.html#sem">sem</a>,
+  author = {I. Markovsky and D. Toon Verbeke},
+  title = {Sum-of-exponentials modeling via Hankel low-rank approximation with palindromic kernel structure},
+  institution = {Dept. ELEC, Vrije Universiteit Brussel},
   year = {2018},
-  institution = {Vrije Univ. Brussel},
-  pdf = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/ica18b.pdf">http://homepages.vub.ac.be/~imarkovs/publications/ica18b.pdf</a>},
-  abstract = {Structured low-rank approximation is used in model reduction, system identification, and signal processing to find low-complexity models from data. The rank constraint imposes the condition that the approximation has bounded complexity and the optimization criterion aims to find the best match between the data---a trajectory of the system---and the approximation. In some applications, however, the data is sub-sampled from a trajectory, which poses the problem of sparse approximation using the the low-rank prior. This paper considers a modified structured low-rank approximation problem where the observed data is a linear transformation of a system's trajectory with reduced dimension. We reformulate this problem as a structured low-rank approximation with missing data and propose a solution methods based on the variable projections principle. We compare the structured low-rank approximation approach with the classical sparsity inducing method of $\ell_1$-norm regularization. The $\ell_1$-norm regularization method is effective for sum-of-exponentials modeling with a large number of samples, however, it is not suitable for identification of systems with damping.},
-  keywords = {structured low-rank approximation, sparse approximation, missing data estimation, sum-of-exponentials modeling, $\ell_1$-norm regularization},
-  software = {<a href="http://homepages.vub.ac.be/~imarkovs/software/ica18.tgz">http://homepages.vub.ac.be/~imarkovs/software/ica18.tgz</a>}
+  url = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/sem.pdf">http://homepages.vub.ac.be/~imarkovs/publications/sem.pdf</a>},
+  abstract = {Estimation of a sum-of-damped-exponentials signal from noisy samples of the signal is a classic signal processing problem. It can be solved by maximum likelihood as well as suboptimal subspace methods. In this paper, we consider the related problem of sum-of-exponentials modeling, in which the model is constrained to have no damping. This constraint is difficult to impose in the subspace methods. We develop solution methods using an equivalent Hankel matrix low-rank approximation formulation. A necessary condition for the model to have no damping is that a vector in the kernel of the Hankel matrix has palindromic structure. Imposing this necessary condition in solution methods is trivial. Simulation results show that even for a relatively high noise-to-signal ratios the necessary condition is in fact also sufficient, i.e., the identified model has no dumping. Another contribution of the paper is a method for sum-of-exponentials modeling based on circulant embedding: low-rank approximation of a circulant matrix constructed from the given data. This method imposes the constraint that the model has no damping plus an addition constraint that the model frequencies are on the discrete-Fourier transform's grid.},
+  keywords = {system identification, sum-of-exponentials modeling, low-rank approximation, behavioral approach, subspace methods, circulant embedding.}
+}
+</pre>
+
+<a name="dist3"></a><pre>
+@techreport{<a href="t.html#dist3">dist3</a>,
+  author = {A. Fazzi and N. Guglielmi and I. Markovsky},
+  title = {Matrix Polynomials Approximate Common Factors Computation},
+  institution = {Dept. ELEC, Vrije Universiteit Brussel},
+  year = {2018},
+  url = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/dist3.pdf">http://homepages.vub.ac.be/~imarkovs/publications/dist3.pdf</a>},
+  abstract = {Detection and estimation of (approximate) polynomials common factors is an important problem in several fields of science, and it is a still active research topic. While the problem has been widely studied for scalar polynomials, the scientific literature in the framework of matrix polynomials seems to be poor, and it is limimited to the problem of exact greatest common divisors computation. We are going to generalize two algorithms from scalar to matrix polynomials, one fast and simple, the second more accurate but more complicated. We test the performances of the two algorithms to show a behavior similar to the scalar case, and finally we describe an application dealing with MIMO systems.},
+  keywords = {matrix polynomials, approximate GCD, subspace method, matrix ODE}
+}
+</pre>
+
+<a name="common-dynamics-css"></a><pre>
+@techreport{<a href="t.html#common-dynamics-css">common-dynamics-css</a>,
+  author = {I. Markovsky and T. Liu and A. Takeda},
+  title = {Subspace methods for common dynamics estimation},
+  institution = {Dept. ELEC, Vrije Universiteit Brussel},
+  year = {2019},
+  url = {<a href="http://homepages.vub.ac.be/~imarkovs/publications/common-dynamics-rev.pdf">http://homepages.vub.ac.be/~imarkovs/publications/common-dynamics-rev.pdf</a>},
+  abstract = {Estimation of common dynamics among several observed signals occurs in signal processing, system theory, and computer algebra problems. In this paper, we propose subspace methods for common linear time-invariant dynamics detection and estimation. First, we consider the deterministic problem of detection of common dynamics when the data is exact (noise free). Then, we consider the stochastic estimation problem when the data is corrupted by white Gaussian noise. The methods proposed have a system theoretic interpretation of finding the intersection of autonomous linear time-invariant behaviors. },
+  keywords = {common dynamics, subspace identification, behavioral approach, approximate common divisor},
+  software = {<a href="http://homepages.vub.ac.be/~imarkovs/software/common-dynamics.tar">http://homepages.vub.ac.be/~imarkovs/software/common-dynamics.tar</a>}
 }
 </pre>
 
 <hr><p><em>This file was generated by
-<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.97.</em></p>
+<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.98.</em></p>
